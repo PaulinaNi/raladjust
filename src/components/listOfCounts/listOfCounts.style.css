@@ -1,0 +1,38 @@
+.listOfCounts-table {
+ border-collapse: collapse;
+ margin: 1.5rem 1.5rem;
+ font-size: 0.9em;
+ min-width: 50%;
+ border-radius: 1rem 1rem 0 0;
+ overflow: hidden;
+ box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+ text-align: left;
+}
+
+.listOfCounts-table thead tr {
+ background-color: #009879;
+ color: #ffffff;
+ font-weight: bold;
+}
+
+.listOfCounts-table th,
+.listOfCounts-table td {
+ padding: 1rem;
+}
+
+.listOfCounts-table tbody tr {
+ border-bottom: 0.1rem solid #dddddd;
+}
+
+.listOfCounts-table tbody tr:nth-of-type(even) {
+ background-color: #f3f3f3;
+}
+
+.listOfCounts-table tr:last-of-type {
+ border-bottom: 0.1rem solid #009879;
+}
+
+.listOfCounts-table tbody tr.active-row {
+ font-weight: bold;
+ color: #009879;
+}
