@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom'
 import './listOfCounts.style.css'
 
 export default function ListOfCounts(props) {
-
+  const { counts } = props
   return (
     <table className='listOfCounts-table'>
       <thead>
@@ -16,15 +17,19 @@ export default function ListOfCounts(props) {
       </thead>
       <tbody>
         {/* when data is load show count list */}
-        {props.counts && props.counts.map(count => {
+        {counts && counts.map(count => {
           return (
-            <tr key={count.id}>
-              <th><a href={`/count:${count.id}`}>{count.id}</a></th>
-              <th>{count.warehouse}</th>
-              <th>{count.type}</th>
-              <th>{count.by}</th>
-              <th>{count.data}</th>
-              <th>{count.status}</th>
+            <tr key={count._id}>
+              <td>
+                <Link to={`/count/${count._id}`}>
+                  {count._id}
+                </Link>
+              </td>
+              <td>{count.warehouse}</td>
+              <td>{count.type}</td>
+              <td>{count.by}</td>
+              <td>{count.data}</td>
+              <td>{count.status}</td>
             </tr>)
         })}
 
